@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tangles-feeds
 
 Home: https://CRAN.R-project.org/package=tangles
 
-Package license: GPL-2.0-or-later
+Package license: GPL-2.0-only
 
 Summary: Spatial data anonymization preserves confidentiality. Using methods described in Zandbergen (2014) <doi:10.1155/2014/567049>, spatial data anonymization is achieved by dithering original spatial coordinates with combinations of randomized vertical, horizontal and rotational shifts. This can apply to non-grid spatial point patterns and raster objects, and the methods preserve the same spatial characteristics and relationships of the original data. Unique hash keying enables data subjected to anonymization sequences to be re-identified where required.
 
