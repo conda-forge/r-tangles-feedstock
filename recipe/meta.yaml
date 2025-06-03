@@ -25,13 +25,13 @@ requirements:
   host:
     - r-base
     - r-digest
-    - r-raster
-    - r-sp
+    - r-sf
+    - r-terra
   run:
     - r-base
     - r-digest
-    - r-raster
-    - r-sp
+    - r-sf
+    - r-terra
 
 test:
   commands:
