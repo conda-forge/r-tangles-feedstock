@@ -1,4 +1,4 @@
-{% set version = '0.8.1' %}
+{% set version = "2.0.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,11 +9,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tangles_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tangles/tangles_{{ version }}.tar.gz
-  sha256: 7013b201d2aa22889f12c695783d076057fe43dcc08e2fd935f9ed098b854519
+  sha256: 7ee227d1f1d687483abbbb135155c2b1c351cfd8d176e42a9c51b0f36abba16a
 
 build:
   noarch: generic
-  number: 3
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -25,13 +25,13 @@ requirements:
   host:
     - r-base
     - r-digest
-    - r-raster
-    - r-sp
+    - r-sf
+    - r-terra
   run:
     - r-base
     - r-digest
-    - r-raster
-    - r-sp
+    - r-sf
+    - r-terra
 
 test:
   commands:
@@ -41,13 +41,8 @@ test:
 about:
   home: https://CRAN.R-project.org/package=tangles
   license: GPL-2.0-only
-  summary: Spatial data anonymization preserves confidentiality. Using methods described in Zandbergen
-    (2014) <doi:10.1155/2014/567049>, spatial data anonymization is achieved by dithering
-    original spatial coordinates with combinations of randomized vertical, horizontal
-    and rotational shifts. This can apply to non-grid spatial point patterns and raster
-    objects, and the methods preserve the same spatial characteristics and relationships
-    of the original data. Unique hash keying enables data subjected to anonymization
-    sequences to be re-identified where required.
+  summary: Spatial data anonymization preserves confidentiality. Using methods described in Zandbergen (2014) <doi:10.1155/2014/567049>, spatial data anonymization is achieved by dithering original spatial coordinates with combinations of randomized vertical, horizontal and rotational shifts. This can apply to non-grid spatial
+    point patterns and raster objects, and the methods preserve the same spatial characteristics and relationships of the original data. Unique hash keying enables data subjected to anonymization sequences to be re-identified where required.
   license_family: GPL2
   license_file:
     - '{{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-2'
